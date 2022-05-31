@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Glasses - Ventas</title>
+    {% load static %}
+    <link href="{% static 'css/ventas.css' %}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Tienda de gafas</h2>
+<form method="POST" action="/factura/"> {% csrf_token %}
+    <h4>Producto</h4>
+    <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" value={{producto.name}} placeholder="Nombre Producto" required class="name" name="txtproducto" disabled>
+                        <i class="fa fa-check-square-o icon"></i>
+                    </div>
+    <div class="input-box">
+                        <input type="text" value={{producto.category}} placeholder="Categoria" required class="name" disabled>
+                        <i class="fa fa-check-square-o icon"></i>
+                    </div>
+    </div>
+    <div class="input-group">
+        <div class="input-box">
+            <input type="text" placeholder="Costo" value={{producto.cost}}  required class="name" name="txtcosto" disabled>
+            <i class="fa fa-check-square-o icon"></i>
+        </div>
+    <div class="input-box">
+            <input type="text" min="0" value={{producto.cantidad_stock}}  placeholder="Stock" required class="name" disabled>
+            <i class="fa fa-check-square-o icon"></i>
+        </div>
+    </div>
+    <div class="input-group">
+    <div class="input-box">
+        <input type="text" placeholder="Descripcion" value="{{producto.description}}" class="name" disabled>
+        <i class="fa fa-check-square-o icon"></i>
+    </div>
+    </div>
+            <h4>Cliente</h4>
+<div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Nombres" required class="name" name="txtnombre">
+                    <i class="fa fa-user-circle-o icon"></i>
+                </div>
+<div class="input-box">
+                    <input type="text" placeholder="Apellidos" required class="name" name="txtapellido">
+                    <i class="fa fa-user-circle-o icon"></i>
+                </div>
+</div>
+<div class="input-group">
+    <div class="input-box">
+        <input list="Documento" placeholder="Tipo de documento" required class="name">
+        <i class="fa fa-id-card-o icon"></i>
+        <datalist id="Documento">
+            <option>Cedula de ciudadanía</option>
+            <option>Tarjeta de identidad</option>
+            <option>Pasaporte</option>
+            <option>PEP</option>
+          </datalist>
+    </div>
+<div class="input-box">
+        <input type="text" placeholder="Documento" required class="name" name="txtdocumento">
+        <i class="fa fa-id-card-o icon"></i>
+    </div>
+</div>
+<div class="input-group">
+    <div class="input-box">
+        <input type="text" placeholder="Telefono" required class="name" name="txttelefono">
+        <i class="fa fa-mobile icon"></i>
+    </div>
+</div>
+<div class="input-group">
+    <div class="input-box">
+        <input type="email" placeholder="E-mail" required class="name" name="txtcorreo">
+        <i class="fa fa-envelope-o icon"></i>
+    </div>
+</div>
+<div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Direccion" required class="name" name="txtdireccion">
+                    <i class="fa fa-map-marker icon"></i>
+                </div>
+</div>
+<div class="input-group">
+    <div class="input-box">
+        <input list="Departamento" placeholder="Departamento" required class="name" name="txtdepartamento">
+        <i class="fa fa-rocket icon"></i>
+        <datalist id="Departamento">
+            <option>Antioquia</option>
+            <option>Bogota</option>
+          </datalist>
+    </div>
+<div class="input-box">
+        <input list="Ciudad" placeholder="Ciudad" required class="name" name="txtciudad">
+        <i class="fa fa-rocket icon"></i>
+        <datalist id="Ciudad">
+            <option>Medellín</option>
+            <option>Bogota</option>
+          </datalist>
+    </div>
+</div>
+<div class="input-box">
+    <input type="number" placeholder="Unidades a llevar" required class="name" min="1">
+    <i class="fa fa-sort-amount-asc icon"></i>
+</div>
+<div class="input-group">
+        <div class="input-box">
+
+
+            <h4>Pago</h4>
+                <input type="radio" name="pay" id="bc1" class="radio">
+                <label for="bc1"><span><i class="fa fa-dollar"></i> Efectivo </span></label>
+                <input type="radio" name="pay" id="bc2" class="radio">
+                <label for="bc2"><span><i class= "fa fa-credit-card-alt"> </i>  Tarjeta (debito/credito)</span></label>
+                <input type="radio" name="pay" id="bc3" class="radio">
+        </div>
+</div>
+<div class="input-group">
+        <div class="input-box">
+            <button type="button"><a href="{% url 'inicio' %}" style="text-decoration: none; color: antiquewhite;">Inicio</a></button>
+        </div>
+         <div class="input-box">
+            <button type="reset">Limpiar</button>
+        </div>
+</div>
+        <div class="input-box">
+            <button type="submit">Finalizar compra</button>
+        </div>
+</form>
+</div>
+</body>
+</html>
