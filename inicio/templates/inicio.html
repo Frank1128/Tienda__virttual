@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Style Glasses- Inicio</title>
+    {% load static %}
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+    <meta name="viewport" content="width=device-width, user-scalabe=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+  <header>
+              <nav class= "navegacion">
+                <ul class= "menu"><a href="mostrar_productos" style="text-decoration: none; color: #ffffff;" class="none"> Ver tienda </a></li>
+                    <!-- <li><a class="ventas" href='ventas'><i></i> Ventas</a></li> -->
+                    <li><a class="productos" href="#"><i class= "fa fa-cart-plus icon"></i> Productos</a></li>
+                </ul> 
+              </nav>
+            </header>
+        <img src="{% static 'img/logo.png' %}" class="logol"> 
+        <br>
+        <h1 class="title">GAFAS DEL MOMENTO</h1>
+        <!-- <button type="button"><a href="/admin">ir a admin</a></button> -->
+        <div class="container">
+            {% for producto in productos %}
+            <div class="card">  
+                <img src="{{producto.imagen.url}}" >
+            
+                <h4>{{producto.name}}</h4>
+                <h4>{{producto.description}}</h4>
+                <p> Categoria: {{producto.category}}</p>
+                <p>$ {{producto.cost}}</p>
+                <a href="/ventas/{{producto.pk}}" > ¡Obtener ahora!</a>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html> 

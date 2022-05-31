@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color:gray;
+}
+
+.cuadro {
+    width: 80px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}
+
+.mapa{
+    height: 69vh;
+    width: 90%;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.sd{
+    margin-left: 100px;
+    margin-top:30px;
+}
+
+.sp{
+    margin-top: 30px;
+}
+
+.text{
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+.tes{
+    font-size: 50px;
+}
+
+
+
