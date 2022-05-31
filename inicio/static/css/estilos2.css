@@ -7,7 +7,7 @@
 }
 
 body{
-   background-color: #fff;
+   background-color: white;
     
 }
 
@@ -54,7 +54,7 @@ contenedor_todo{
 
 .caja_trasera button{
     padding: 10px 40px;
-    border: 2px solid #fff;
+    border: 2px solid white;
     background: transparent;
     font-size: 14px;
     font-weight: 600;
@@ -66,7 +66,7 @@ contenedor_todo{
 
 .caja_trasera button:hover{
     background: #fff;
-    color: gray;
+    color: white;
     border-radius: 5px;
 }
 
@@ -87,7 +87,7 @@ contenedor_todo{
 .contenedor_login-register form{
     width: 100%;
     padding: 80px 20px;
-    background: #E7E7E7; 
+    background: white; 
     position: absolute;
     border-radius: 20px;
     margin-left: 40px;
@@ -105,7 +105,7 @@ contenedor_todo{
     margin-top: 20px;
     padding: 10px;
     border: none;
-    background: #F2F2F2;
+    background: white;
     font-size: 16px;
     outline: none;
 }
@@ -116,7 +116,7 @@ contenedor_todo{
     border: none;
     font-size: 14px;
     background-color: black;
-    color: #E7E7E7;
+    color: white;
     cursor: pointer;
     outline: none;
 }
@@ -124,7 +124,7 @@ contenedor_todo{
 .formulario_login{
     opacity: 1;
     display: block;
-    background-color: #E7E7E7;
+    background-color: white;
 }
 
 .formulario_register{
@@ -158,6 +158,7 @@ contenedor_todo{
         width: 400px;
         max-width: 500px;
         margin-left: 65px;
+        color: white;
     }
     
     .contenedor_login-register form{
@@ -202,7 +203,7 @@ contenedor_todo{
     
 .submenu2{
     position: absolute;
-    background: #333333;
+    background: white;
     width: 120px;
     visibility: hidden;
     opacity: 0;
