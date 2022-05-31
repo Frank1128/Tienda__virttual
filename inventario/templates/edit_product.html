@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Glasses - Actualizar</title>
+    {% load static %}
+    <link href="{% static 'css/ventas.css' %}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+<div class="wrapper">
+    <h2>Renovar productos</h2>
+<form method="POST"> {% csrf_token %}
+    <div class="input-group">
+        <div class="input-box">
+            <input type=" text" value="{{productos.name}}" placeholder="Nombre" required class="name">
+            <i class="fa fa-pencil-square icon"></i>
+        </div>
+        <div class="input-box">
+            <input type=" text" value="{{productos.category}}" placeholder="Categoria" required class="name">
+            <i class="fa fa-pencil-square icon"></i>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="input-box">
+            <input type="text" value="{{productos.cost}}" placeholder="Valor" required class="name">
+            <i class="fa fa-pencil-square icon"></i>
+        </div>
+        <div class="input-box">
+            <input type="text" value="{{productos.cantidad_stock}}" placeholder="Cantidad en tienda" required class="name">
+            <i class="fa fa-pencil-square icon"></i>
+        </div>
+    </div>
+        <div class="input-group">
+            <div class="input-box">
+                <input type="text" value="{{productos.description}}" placeholder="Descripcion" required class="name">
+                <i class="fa fa-pencil-square icon"></i>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-box">
+                <button type="submit">Renovar</button>
+            </div>
+</form>
+</div>
+</body>
+</html>

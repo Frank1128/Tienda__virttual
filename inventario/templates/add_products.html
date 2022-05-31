@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Glasses- Agragar Producto</title>
+    {% load static %}
+    <link href="{% static 'css/ventas.css' %}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Agregar Productos</h2>
+    <form method="POST" action="/agregar_producto/" enctype="multipart/form-data"> {% csrf_token%}
+            <h4>Datos producto</h4>
+        <div class="input-group">
+            <div class="input-box">
+                <input type="text" placeholder="Nombre del producto" name="nombre" required class="name">
+                <i class="fa fa-check-square-o icon"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Categoria" name="categoria" required class="name">
+                <i class="fa fa-check-square-o icon"></i>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-box">
+                <input type="text" placeholder="Valor" name="costo" required class="name">
+                <i class="fa fa-check-square-o icon"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Cantidad en tienda" name="stock" required class="name">
+                <i class="fa fa-check-square-o icon"></i>
+            </div>
+        </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <input  placeholder="Descripcion" type="text" name="descripcion" required class="name">
+                    <i class="fa fa-check-square-o icon"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <h4>Adjunte una imagen del producto</h4>
+                <input type="file" placeholder="Agragar Imagen" required accept="image/*" name="imagen">
+            </div>
+            </div>
+        <div class="input-group">
+            <div class="input-box">
+                <button type="button"><a href="{% url 'show-prods' %}" style="text-decoration: none; color: antiquewhite;">Ver productos</a></button>
+            </div>
+            <div class="input-box">
+                <button type="submit">Agregar producto</button>
+            </div>
+        </div>
+        <div class="input-box">
+            <button type="reset">Limpiar Campos</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
