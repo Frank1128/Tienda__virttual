@@ -19,10 +19,10 @@ from django.urls import path
 from inventario.views import *
 from contacto.views import mensaje_contacto
 from inicio.views import inicio
-from ventas.models import factura
 from ventas.views import ventas
 from django.conf import settings
 from django.conf.urls.static import static
+from ventas.views import fectura
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,6 +35,6 @@ urlpatterns = [
     path('eliminar_producto/<int:pk>', eliminar_producto, name='del-prods'),
     path('ventas/<int:pk>', ventas, name='ventas'),
     path('contacto/', mensaje_contacto),
-    path('factura/', factura, name='factura')
+    path('fectura/<int:pk>', fectura, name='fectura')
 ]
 urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

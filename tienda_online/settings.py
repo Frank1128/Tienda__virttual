@@ -133,8 +133,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_HOST = 'smtp.googlemail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'salome.jaramillo557@pascualbravo.edu.co'
-EMAIL_HOST_PASSWORD = 'Salome.22'
+EMAIL_HOST_USER = 'salomejaramillopiedrahita@gmail.com'
+EMAIL_HOST_PASSWORD = 'leidy4225'
 EMAIL_USE_TLS = True
 
 #django_heroku.settings(locals())

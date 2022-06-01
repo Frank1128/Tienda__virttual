@@ -12,31 +12,31 @@
 <body>
     <div class="wrapper">
         <h2>Tienda de gafas</h2>
-<form method="POST" action="/factura/"> {% csrf_token %}
+<form method="POST" action="/fectura/{{producto.id}}"> {% csrf_token %}
     <h4>Producto</h4>
     <div class="input-group">
                     <div class="input-box">
-                        <input type="text" value={{producto.name}} placeholder="Nombre Producto" required class="name" name="txtproducto" disabled>
+                        <input type="text" value={{producto.name}} placeholder="Nombre Producto" required class="name" name="txtproducto" readonly>
                         <i class="fa fa-check-square-o icon"></i>
                     </div>
     <div class="input-box">
-                        <input type="text" value={{producto.category}} placeholder="Categoria" required class="name" disabled>
+                        <input type="text" value={{producto.category}} placeholder="Categoria" required class="name" readonly>
                         <i class="fa fa-check-square-o icon"></i>
                     </div>
     </div>
     <div class="input-group">
         <div class="input-box">
-            <input type="text" placeholder="Costo" value={{producto.cost}}  required class="name" name="txtcosto" disabled>
+            <input type="text" placeholder="Costo" value={{producto.cost}}  required class="name" name="txtcosto" readonly>
             <i class="fa fa-check-square-o icon"></i>
         </div>
     <div class="input-box">
-            <input type="text" min="0" value={{producto.cantidad_stock}}  placeholder="Stock" required class="name" disabled>
+            <input type="text" min="0" value={{producto.cantidad_stock}}  placeholder="Stock" required class="name" readonly>
             <i class="fa fa-check-square-o icon"></i>
         </div>
     </div>
     <div class="input-group">
     <div class="input-box">
-        <input type="text" placeholder="Descripcion" value="{{producto.description}}" class="name" disabled>
+        <input type="text" placeholder="Descripcion" value="{{producto.description}}" name = "txtdescripcion" class="name" readonly>
         <i class="fa fa-check-square-o icon"></i>
     </div>
     </div>
@@ -92,6 +92,9 @@
         <datalist id="Departamento">
             <option>Antioquia</option>
             <option>Bogota</option>
+            <option>Valle del Cauca</option>
+            <option>Santander</option>
+            <option>Risaralda</option>
           </datalist>
     </div>
 <div class="input-box">
@@ -100,6 +103,9 @@
         <datalist id="Ciudad">
             <option>Medellín</option>
             <option>Bogota</option>
+            <option>Cali</option>
+            <option>Bucaramanga</option>
+            <option>Pereira</option>
           </datalist>
     </div>
 </div>
@@ -124,7 +130,7 @@
             <button type="button"><a href="{% url 'inicio' %}" style="text-decoration: none; color: antiquewhite;">Inicio</a></button>
         </div>
          <div class="input-box">
-            <button type="reset">Limpiar</button>
+            <button type="reset">Limpiar datos</button>
         </div>
 </div>
         <div class="input-box">

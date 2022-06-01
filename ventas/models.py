@@ -13,4 +13,4 @@ class factura(models.Model):
     ciudad = models.CharField(max_length=255)
     producto = models.CharField(max_length=255)
     costo = models.BigIntegerField(default=0)
-        
+     

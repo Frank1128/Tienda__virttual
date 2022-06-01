@@ -16,7 +16,7 @@ def obtener_producto(request):
 
 def mostrar_productos(request):
 
-    productos = Productos.objects.all()
+    productos = Productos.objects.all().order_by('id')
 
     return render(request,'show_products.html',{'productos':productos})
 

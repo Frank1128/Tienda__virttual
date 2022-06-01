@@ -11,10 +11,10 @@ body{
     line-height: 1.6;
 }
 .navegacion{
-    height: 60px;
-    width: 75%;
+    height: 67px;
+    width: 73%;
     display: flex;
-    margin:23px 200;
+    margin:30px 200;
     background: rgb(33, 146, 103);
     border-radius: 5px;
     position: relative;
@@ -29,7 +29,7 @@ body{
 }
 .menu > li > a{
     display: block;
-    padding: 19px 25px;
+    padding: 20px 255px;
     margin-left: 37px;
     color: rgb(255, 255, 255);
     font-family: sans-serif;
