@@ -14,12 +14,8 @@
 
         <br><br>
         <div class="alert alert-danger" role="alert">
-            ¿Esta seguro de eliminar el producto "{{ producto.name}}"?
+            ¿Esta seguro que desea eliminar el producto: "{{ producto.name}}"?
         </div>
-
-        <p>
-            <a href="{% url 'show-prods' %}"><-- Retornar</a>
-        </p>
 
         <p>
             <input class="btn btn-danger" type="submit" value="Confirmar">

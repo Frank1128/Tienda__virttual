@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda DM - Inventario</title>
+    <title>Style Glasses - Inventario</title>
 </head>
 <style>
     table {
@@ -23,19 +23,19 @@
     }
 </style>
 <body>
-    <h2 style="text-align:center">Informacion De Los Productos</h2>
-    <h2 style="text-align:center">Inventario</h2>
+    <h2 style="text-align:center">Informacion de los productos de la tienda</h2>
+    <h2 style="text-align:center">Registro de productos</h2>
     <table align="center" style="margin: 0px auto;">
         <thead>
             <tr>
-                <th>ID producto</th>
-                <th>Nombre</th>
-                <th>Categoria</th>
-                <th>Costo</th>
-                <th>Stock</th>
-                <th>descripcion</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th> ID PRODUCTO </th>
+                <th>  NOMBRE  </th>
+                <th> CATEGORIA </th>
+                <th> COSTO </th>
+                <th> STOCK </th>
+                <th> DESCRIPCION </th>
+                <th> EDITAR </th>
+                <th> ELIMINAR </th>
             </tr>
         </thead>
         <tbody>
@@ -48,10 +48,10 @@
                 <td>{{producto.cantidad_stock}}</td>
                 <td>{{producto.description}}</td>
                 <td>
-                    <a href="/editar_producto/{{producto.pk}}">Update</a>
+                    <a href="/editar_producto/{{producto.pk}}">Editar</a>
                 </td>
                 <td>
-                    <a href="/eliminar_producto/{{producto.pk}}">Delete</a>
+                    <a href="/eliminar_producto/{{producto.pk}}">Eliminar</a>
                 </td>
             </tr>
             {% endfor %}
@@ -60,11 +60,11 @@
 
     <br><br>
     <div class="alert alert-danger" role="alert" style="text-align:center" >
-        ¿Quieres ingresar un nuevo producto al inventario?
+        Clic para agregar un producto nuevo al inventario
     </div>
 
     <div style="margin-left: 43%; margin-top: 1%;"> 
-        <button type="button"><a href="{% url 'add-prods' %}" style="text-decoration: none; color: #000000;">Volver a agregar un producto </a></button>
+        <button type="button"><a href="{% url 'add-prods' %}" style="text-decoration: none; color: #000000;">Agregar un producto </a></button>
     </div>
 </body>
 </html>

@@ -11,14 +11,14 @@ body{
     line-height: 1.6;
 }
 .navegacion{
-    height: 67px;
+    height: 75px;
     width: 73%;
     display: flex;
-    margin:30px 200;
-    background: rgb(33, 146, 103);
+    margin:18px 220;
+    background: rgb(64, 145, 120);
     border-radius: 5px;
     position: relative;
-    z-index: 95;
+    z-index: 105;
 }
 .navegacion ul{
     list-style: none;

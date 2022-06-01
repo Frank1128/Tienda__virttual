@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from contacto.forms import Contacto
 
-# Create your views here.
-
 
 def mensaje_contacto(request):
 

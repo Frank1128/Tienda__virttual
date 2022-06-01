@@ -3,19 +3,17 @@
 
 </head>
     <body>
-        <h3>{{ciudad}} - {{ fecha }}</h3>
-        <h2>Hola Jefe Ivan.</h2>
+        <h2>{{ciudad}} - {{ fecha }}</h2>
+
+        <h2>Hola. Este es un correo para los administradores Salome y Frank</h2>
         <p>
-            Por favor despachar el siguiente producto al cliente {{nombre}}{{apellido}}...
+            Se inicia el despacho del producto: {{ producto }} {{descripcion}}, ya que fue solicitado por el
+            cliente: {{ nombre }} {{ apellido }}, se le han brindado salvedades e informacion pertinente.
             <br>
-            * {{ producto }} {{descripcion}} 
             <br>
-            Con un valor De {{ costo }}
-            <br>
-            Enviar a {{ciudad}}, {{direccion}} 
-            <br>
-            Puento De Venta Tienda DM.
+            El producto sera llevado a {{ direccion }}, en {{ ciudad }} - {{ departamento }}
+
+            STYLE GLASSES
         </p>
-        <h6>---------------------------------------------------</h6>
     </body>
 </html>
